@@ -1,0 +1,130 @@
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --success: #10b981;
+  --text: #000;
+  --light-bg: #f8fafc;
+  --border: #e2e8f0;
+}
+
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  color: var(--text);
+}
+
+.form-control {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  height: auto;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+              0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.input-group .form-control {
+  border-radius: 12px 0 0 12px;
+  border-right: none;
+}
+
+.input-group .btn-toggle {
+  border: 2px solid var(--border);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  background-color: #ffffff;
+  color: #64748b;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.input-group .btn-toggle:hover {
+  background-color: #f8fafc;
+  color: var(--primary);
+}
+
+.input-group .btn-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-success {
+  background-color: var(--success);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+ }
+
+.navbar {
+  backdrop-filter: blur(12px);
+}
+
+header {
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.alert {
+  border-radius: 12px;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer;
+}
